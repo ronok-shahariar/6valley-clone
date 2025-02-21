@@ -3,8 +3,8 @@
   max-width: 1440px;
   margin: auto;
   padding: 20px;
-  background: white; /* Adjust if needed */
-  border-radius: 5px; /* Rounded corners */
+  background: white;
+  border-radius: 5px;
   border: 1px solid #ddd;
 }
 
@@ -62,8 +62,8 @@
 #mySwiperHero,
 #mySwiperDiscount {
   width: 100%;
-  max-width: 800px; /* Adjust width */
-  height: 400px; /* Adjust height */
+  max-width: 800px;
+  height: 400px;
   border-radius: 5px;
   overflow: hidden;
 }

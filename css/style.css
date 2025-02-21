@@ -113,7 +113,7 @@ ul {
 
 @media (max-width: 768px) {
   html {
-    font-size: 55%; /* Adjust font size for smaller screens */
+    font-size: 55%;
   }
 
   .container {
@@ -127,7 +127,7 @@ ul {
 
 @media (max-width: 480px) {
   html {
-    font-size: 50%; /* Further reduce font size for mobile */
+    font-size: 50%;
   }
   .container {
     padding: 0 12px;

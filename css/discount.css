@@ -45,10 +45,10 @@
 
 .time-box {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  gap: 14px; /* Add space between the number and label */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
 
 .number {
@@ -93,11 +93,11 @@
 }
 
 .swiper-button-prev-discount {
-  left: 0px; /* Adjust to position properly */
+  left: 0px;
 }
 
 .swiper-button-next-discount {
-  right: 0px; /* Adjust to position properly */
+  right: 0px;
 }
 
 .product-card {
@@ -106,8 +106,8 @@
   overflow: hidden;
   border-radius: 8px;
   text-align: start;
-  flex: 1; /* Ensure each card takes equal space */
-  margin: 0 10px; /* Add some space between the cards */
+  flex: 1;
+  margin: 0 10px;
   transition: border 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -119,31 +119,31 @@
   color: white;
   background-color: #245daa;
   padding: 10px;
-  border-radius: 50%; /* Fully rounded */
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
 
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .product-card.selected .cart-icon {
-  opacity: 1; /* Make it visible */
+  opacity: 1;
   visibility: visible;
 }
 
 .cart-icon i {
-  font-size: 13px; /* Set the icon size */
-  color: white; /* Ensure the icon is white */
+  font-size: 13px;
+  color: white;
 }
 
 .not-available {
   position: absolute;
   top: 120px;
   right: 7px;
-  background-color: white; /* Red background */
+  background-color: white;
   color: gray;
   padding: 10px;
   font-size: 12px;
@@ -160,9 +160,9 @@
   top: 0px;
   right: 10px;
   color: white;
-  background-color: #245daa; /* Red background */
+  background-color: #245daa;
   padding: 10px;
-  border-radius: 100%; /* Fully rounded */
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,11 +202,11 @@
 
 .product-name {
   font-weight: 500;
-  white-space: nowrap; /* Keep text in a single line */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Show "..." when text overflows */
-  max-width: 180px; /* Adjust max width based on design */
-  display: block; /* Ensure proper layout */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+  display: block;
 }
 
 .price {
@@ -291,7 +291,7 @@
   /* Flash icon */
   .flash-icon {
     padding: 20px;
-    border-radius: 5px; /* Fully rounded */
+    border-radius: 5px;
     font-size: 25px;
   }
   .discount-badge {
@@ -312,10 +312,9 @@
     font-size: 20px;
   }
   .product-image {
-    /* Adjust the size of the image inside the swiper-slide */
-    width: 100%; /* Make the image fill the width of the slide */
-    max-height: 300px; /* Set a max height to ensure it doesn't stretch */
-    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
   }
   .rating {
     font-size: 20px;
@@ -380,7 +379,7 @@
     cursor: pointer;
   }
   #mySwiperDiscount {
-    height: 100%; /* Swiper should take full height */
+    height: 100%;
   }
 
   .swiper-slide {
@@ -408,7 +407,7 @@
   /* Flash icon */
   .flash-icon {
     padding: 20px;
-    border-radius: 5px; /* Fully rounded */
+    border-radius: 5px;
     font-size: 25px;
   }
   .discount-badge {
@@ -483,7 +482,7 @@
   /* Flash icon */
   .flash-icon {
     padding: 15px;
-    border-radius: 5px; /* Fully rounded */
+    border-radius: 5px;
     font-size: 20px;
   }
 
@@ -535,7 +534,7 @@
     height: 100%;
   }
   #mySwiperDiscount {
-    height: 100%; /* Swiper should take full height */
+    height: 100%;
   }
   .swiper-slide {
     width: 0px;
@@ -576,7 +575,7 @@
   /* Flash icon */
   .flash-icon {
     padding: 15px;
-    border-radius: 5px; /* Fully rounded */
+    border-radius: 5px;
     font-size: 20px;
   }
 
@@ -598,10 +597,9 @@
     font-size: 20px;
   }
   .product-image {
-    /* Adjust the size of the image inside the swiper-slide */
-    width: 100%; /* Make the image fill the width of the slide */
-    max-height: 300px; /* Set a max height to ensure it doesn't stretch */
-    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
   }
   .rating {
     font-size: 20px;
@@ -633,7 +631,7 @@
     height: 100%;
   }
   #mySwiperDiscount {
-    height: 100%; /* Swiper should take full height */
+    height: 100%;
   }
   .swiper-button-prev-discount,
   .swiper-button-next-discount {
@@ -723,17 +721,16 @@
     overflow: hidden;
     border-radius: 8px;
     text-align: start;
-    flex: 1; /* Ensure each card takes equal space */
-    margin: 0 10px; /* Add some space between the cards */
+    flex: 1;
+    margin: 0 10px;
     transition: border 0.3s ease-in-out;
     cursor: pointer;
   }
 
   .product-image {
-    /* Adjust the size of the image inside the swiper-slide */
-    width: 100%; /* Make the image fill the width of the slide */
-    max-height: 200px; /* Set a max height to ensure it doesn't stretch */
-    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
   }
   .cart-icon {
     padding: 10px;
@@ -742,7 +739,7 @@
     position: absolute;
     top: 150px;
     right: 20px;
-    background-color: white; /* Red background */
+    background-color: white;
     color: gray;
     padding: 10px;
     font-size: 12px;
@@ -762,7 +759,7 @@
   /* Flash icon */
   .flash-icon {
     padding: 10px;
-    border-radius: 5px; /* Fully rounded */
+    border-radius: 5px;
     font-size: 16px;
   }
   .discount-badge {

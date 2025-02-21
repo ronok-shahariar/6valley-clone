@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 550px; /* Adjust width */
+  max-width: 550px;
   height: 45px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -109,7 +109,7 @@
 }
 
 .browse-categories {
-  background-color: var(--color-primary); /* Blue background */
+  background-color: var(--color-primary);
   padding: 12px 12px;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@
 }
 
 .browse-categories-select {
-  background-color: var(--color-primary); /* Blue background */
+  background-color: var(--color-primary);
   color: white; /* White text */
   border: none;
   font-size: 14px;
@@ -126,17 +126,17 @@
   outline: none;
 }
 .browse-categories-select option {
-  background-color: white; /* Background for dropdown items */
-  color: black; /* Text color inside dropdown */
+  background-color: white;
+  color: black;
 }
 
 .icon-wrapper {
   position: relative;
   display: inline-block;
-  padding-left: 8px; /* Space between border and icon */
-  padding-right: 8px; /* Space between border and icon */
-  padding-top: 4px; /* Space between border and icon */
-  border-left: 1px solid #b9b9b9; /* Left border */
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  border-left: 1px solid #b9b9b9;
 }
 .icon-wrapper i {
   width: 22px;
@@ -145,10 +145,10 @@
 }
 .badge {
   position: absolute;
-  top: -4px; /* Move it above */
-  right: -2px; /* Align to the right */
-  background-color: var(--color-primary); /* Badge color */
-  color: white; /* Text color */
+  top: -4px;
+  right: -2px;
+  background-color: var(--color-primary);
+  color: white;
   font-size: 10px;
   font-weight: bold;
   width: 18px;
@@ -156,7 +156,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* Make it circular */
+  border-radius: 50%;
 }
 
 /* Style Hamburger Button */
@@ -165,14 +165,14 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* Hidden on larger screens */
+  display: none;
 }
 
 /* Style the Navigation Menu */
 .nav-menu {
   position: fixed;
   top: 0;
-  right: -150%; /* Hide menu off-screen */
+  right: -150%;
   width: 400px;
   height: 100%;
   background-color: white;
@@ -195,7 +195,7 @@
 
 /* Show menu when 'show' class is added */
 .nav-menu.show {
-  right: 0; /* Slide in from the right */
+  right: 0;
 }
 
 /* ✅ Responsive Design */

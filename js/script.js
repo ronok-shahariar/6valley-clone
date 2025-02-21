@@ -1,6 +1,6 @@
 // Function to load HTML components
 function loadComponent(id, file) {
-  return fetch(file) // Return the fetch promise
+  return fetch(file)
     .then((response) => response.text())
     .then((data) => {
       document.getElementById(id).innerHTML = data;
@@ -70,27 +70,27 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 500,
         breakpoints: {
           0: {
-            slidesPerView: 2, // Show 2 cards for screens < 760px
+            slidesPerView: 2,
             spaceBetween: 3,
           },
           760: {
-            slidesPerView: 2, // Show 4 cards for screens >= 760px
+            slidesPerView: 2,
             spaceBetween: 6,
           },
           1024: {
-            slidesPerView: 4, // Show two slides for medium screens
+            slidesPerView: 4,
             spaceBetween: 6,
           },
           1400: {
-            slidesPerView: 5, // Show two slides for medium screens
+            slidesPerView: 5,
             spaceBetween: 6,
           },
           1500: {
-            slidesPerView: 5, // Show two slides for medium screens
+            slidesPerView: 5,
             spaceBetween: 30,
           },
           2000: {
-            slidesPerView: 5, // Show two slides for medium screens
+            slidesPerView: 5,
             spaceBetween: 6,
           },
         },
@@ -120,10 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Check if item is out of stock
       const quantity = parseInt(card.getAttribute("data-quantity"), 10);
       if (quantity === 0) {
-        cartIcon.style.display = "none"; // Hide the cart icon
-        notAvailable.style.display = "flex"; // Show the "sold out" message
+        cartIcon.style.display = "none";
+        notAvailable.style.display = "flex";
       } else {
-        notAvailable.style.display = "none"; // Hide "sold out" message
+        notAvailable.style.display = "none";
       }
 
       // Check if the discount is greater than 40
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create flash icon
         const flashIcon = document.createElement("div");
         flashIcon.classList.add("flash-icon");
-        flashIcon.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`; // Flash icon (Font Awesome)
+        flashIcon.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
 
         // Create round div below the flash icon
         const roundDiv = document.createElement("div");
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ✅ Initialize Countdown Timer
-    const targetDate = new Date("2025-03-02T23:59:59").getTime(); // Set the target date
+    const targetDate = new Date("2025-03-02T23:59:59").getTime();
 
     const countdownInterval = setInterval(function () {
       const now = new Date().getTime();
