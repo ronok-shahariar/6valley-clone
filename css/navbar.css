@@ -1,0 +1,293 @@
+/* ---------------- NavBar ---------------------- */
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+/* ---------------- Top Navbar ---------------------- */
+.top_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo img {
+  height: 35px;
+}
+
+/* ✅ Responsive Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 550px; /* Adjust width */
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+}
+
+.search-category-container {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #ddd;
+  padding: 0 10px;
+}
+
+.search-category {
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+.search-bar button {
+  background: var(--color-primary);
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Promo Banner */
+.promo img {
+  height: 60px;
+  cursor: pointer;
+}
+
+/* ---------------- Bottom Navbar (Hamburger Menu) ---------------------- */
+.bottom_navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Navigation Links */
+.nav-links,
+.nav-actions {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 450;
+}
+.nav-actions li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.nav-links li:hover,
+.nav-actions li:hover {
+  color: var(--color-primary);
+}
+
+.browse-categories {
+  background-color: var(--color-primary); /* Blue background */
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.browse-categories-select {
+  background-color: var(--color-primary); /* Blue background */
+  color: white; /* White text */
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+.browse-categories-select option {
+  background-color: white; /* Background for dropdown items */
+  color: black; /* Text color inside dropdown */
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-left: 8px; /* Space between border and icon */
+  padding-right: 8px; /* Space between border and icon */
+  padding-top: 4px; /* Space between border and icon */
+  border-left: 1px solid #b9b9b9; /* Left border */
+}
+.icon-wrapper i {
+  width: 22px;
+  height: 22px;
+  color: gray;
+}
+.badge {
+  position: absolute;
+  top: -4px; /* Move it above */
+  right: -2px; /* Align to the right */
+  background-color: var(--color-primary); /* Badge color */
+  color: white; /* Text color */
+  font-size: 10px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Make it circular */
+}
+
+/* Style Hamburger Button */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden on larger screens */
+}
+
+/* Style the Navigation Menu */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -150%; /* Hide menu off-screen */
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 9999;
+}
+
+/* ✅ Close Button */
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* Show menu when 'show' class is added */
+.nav-menu.show {
+  right: 0; /* Slide in from the right */
+}
+
+/* ✅ Responsive Design */
+
+@media (max-width: 2024px) {
+  .logo img {
+    height: 65px;
+  }
+  .search-bar {
+    max-width: 50%;
+    height: 40px;
+  }
+}
+@media (max-width: 1500px) {
+  .logo img {
+    height: 45px;
+  }
+  .search-bar {
+    max-width: 50%;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top_navbar {
+    text-align: center;
+  }
+  .logo img {
+    height: 55px;
+  }
+
+  .search-bar {
+    max-width: 50%;
+  }
+  .icon-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .top_navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 18px;
+    border: none;
+    width: 100%;
+  }
+
+  .logo-close-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .top-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+  .promo {
+    display: none;
+  }
+
+  .search-bar {
+    width: 60%;
+    height: 35px;
+  }
+
+  .search-bar input {
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    width: 50px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    display: flex;
+    gap: 40px;
+  }
+  .bottom_navbar {
+    display: none;
+  }
+}

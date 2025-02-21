@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --font-main: "Inter", sans-serif;
+  --color-primary: #1455ac;
+  --color-secondary: #edf5ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 180rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ✅ Responsive Top Navbar */
+.top_nav {
+  width: 100%;
+  background-color: var(--color-secondary);
+}
+
+.top_nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-secondary);
+  flex-wrap: wrap;
+}
+
+.left_section {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 0.5rem;
+}
+
+.left_section i {
+  margin-right: 0.8rem;
+}
+
+.right_section {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* Dropdown */
+.dropdown {
+  border: none;
+  background-color: var(--color-secondary);
+  outline: none;
+  font-size: 1.4rem;
+}
+
+.custom-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+/* Flag Styling */
+.flag-icon {
+  width: 2rem;
+  height: 1.4rem;
+  margin-right: 0.4rem;
+}
+
+/* Seller Button */
+.become_seller {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .top_nav_wrapper {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .left_section,
+  .right_section {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .top_nav_wrapper {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* Further reduce font size for mobile */
+  }
+  .container {
+    padding: 0 12px;
+    padding: 0%;
+  }
+
+  .top_nav_wrapper {
+    padding: 0.5rem 1rem;
+  }
+
+  .left_section {
+    font-size: 1.2rem;
+  }
+
+  .right_section {
+    gap: 1rem;
+  }
+}

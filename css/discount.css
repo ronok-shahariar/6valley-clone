@@ -1,0 +1,800 @@
+.discount-products {
+  padding: 40px;
+  border: 1px solid #f5f2f2;
+  box-shadow: 0px 4px 10px #f7fafd;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.discount-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.promo-discount {
+  display: none;
+}
+.promo-discount2 {
+  display: none;
+}
+
+/* Left Side */
+.discount-left {
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-image {
+  border-radius: 8px;
+  width: 90%;
+  height: 40%;
+}
+
+.countdown {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  gap: 14px; /* Add space between the number and label */
+}
+
+.number {
+  text-align: center;
+  background: #f2f8fb;
+  padding: 10px;
+  border-radius: 100px;
+  color: #222222;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.label {
+  margin-top: 0px;
+  font-size: 12px;
+  color: gray;
+}
+
+/* Right Side - Swiper */
+.discount-right {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.swiper-button-prev-discount,
+.swiper-button-next-discount {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #245daa;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-button-prev-discount {
+  left: 0px; /* Adjust to position properly */
+}
+
+.swiper-button-next-discount {
+  right: 0px; /* Adjust to position properly */
+}
+
+.product-card {
+  background: white;
+  padding-bottom: 30px;
+  overflow: hidden;
+  border-radius: 8px;
+  text-align: start;
+  flex: 1; /* Ensure each card takes equal space */
+  margin: 0 10px; /* Add some space between the cards */
+  transition: border 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: absolute;
+  top: 120px;
+  right: 30px;
+  color: white;
+  background-color: #245daa;
+  padding: 10px;
+  border-radius: 50%; /* Fully rounded */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.product-card.selected .cart-icon {
+  opacity: 1; /* Make it visible */
+  visibility: visible;
+}
+
+.cart-icon i {
+  font-size: 13px; /* Set the icon size */
+  color: white; /* Ensure the icon is white */
+}
+
+.not-available {
+  position: absolute;
+  top: 120px;
+  right: 7px;
+  background-color: white; /* Red background */
+  color: gray;
+  padding: 10px;
+  font-size: 12px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 180px;
+}
+
+/* Flash icon */
+.flash-icon {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: white;
+  background-color: #245daa; /* Red background */
+  padding: 10px;
+  border-radius: 100%; /* Fully rounded */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #db3022;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 60px;
+  font-size: 12px;
+}
+
+.product-image {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.rating {
+  font-size: 12px;
+  margin-top: 10px;
+  color: gold;
+}
+.rating span.rating-number {
+  color: rgb(139, 139, 135) !important;
+}
+
+.shop-name {
+  font-size: 12px;
+  color: rgb(187, 183, 183);
+}
+
+.product-name {
+  font-weight: 500;
+  white-space: nowrap; /* Keep text in a single line */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show "..." when text overflows */
+  max-width: 180px; /* Adjust max width based on design */
+  display: block; /* Ensure proper layout */
+}
+
+.price {
+  margin-top: 5px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.new-price {
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media (max-width: 2024px) {
+  /* Left Side */
+  .discount-left {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .offer-image {
+    border-radius: 8px;
+    width: 100%;
+    height: 30%;
+  }
+  .discount-products {
+    height: auto;
+  }
+  .countdown {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 80%;
+    justify-content: space-between;
+  }
+  /* Right Side - Swiper */
+  .discount-right {
+    flex: 70%;
+    display: flex;
+    align-items: start;
+  }
+
+  .product-card {
+    background: white;
+    padding-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    text-align: start;
+    transition: border 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .swiper-slide {
+    width: 500px;
+    height: 500px;
+  }
+  .offer-image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+  .discount-products {
+    height: auto;
+  }
+  .not-available {
+    top: 240px;
+    right: 5px;
+    font-size: 22px;
+    width: 380px;
+    height: 70px;
+  }
+  .cart-icon {
+    padding: 20px;
+  }
+  /* Flash icon */
+  .flash-icon {
+    padding: 20px;
+    border-radius: 5px; /* Fully rounded */
+    font-size: 25px;
+  }
+  .discount-badge {
+    left: 14px;
+    padding: 9px 14px;
+    font-size: 25px;
+  }
+
+  .time-box {
+    width: 55px;
+    height: 95px;
+  }
+  .number {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .label {
+    font-size: 20px;
+  }
+  .product-image {
+    /* Adjust the size of the image inside the swiper-slide */
+    width: 100%; /* Make the image fill the width of the slide */
+    max-height: 300px; /* Set a max height to ensure it doesn't stretch */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+  }
+  .rating {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .shop-name {
+    font-size: 20px;
+  }
+
+  .product-name {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  .old-price {
+    font-size: 22px;
+  }
+
+  .new-price {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1800px) {
+  /* Left Side */
+  .discount-left {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .offer-image {
+    border-radius: 8px;
+    width: 100%;
+    height: 30%;
+  }
+  .discount-products {
+    height: auto;
+  }
+  .countdown {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 80%;
+    justify-content: space-between;
+  }
+  /* Right Side - Swiper */
+  .discount-right {
+    flex: 70%;
+    display: flex;
+    align-items: start;
+  }
+
+  .product-card {
+    background: white;
+    padding-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    text-align: start;
+    transition: border 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  #mySwiperDiscount {
+    height: 100%; /* Swiper should take full height */
+  }
+
+  .swiper-slide {
+    width: 500px;
+    height: 500px;
+  }
+  .offer-image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+  .discount-products {
+    height: auto;
+  }
+  .not-available {
+    top: 240px;
+    right: 5px;
+    font-size: 22px;
+    width: 380px;
+    height: 70px;
+  }
+  .cart-icon {
+    padding: 20px;
+  }
+  /* Flash icon */
+  .flash-icon {
+    padding: 20px;
+    border-radius: 5px; /* Fully rounded */
+    font-size: 25px;
+  }
+  .discount-badge {
+    left: 14px;
+    padding: 9px 14px;
+    font-size: 25px;
+  }
+
+  .time-box {
+    width: 55px;
+    height: 95px;
+  }
+  .number {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .label {
+    font-size: 20px;
+  }
+
+  .rating {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .shop-name {
+    font-size: 20px;
+  }
+
+  .product-name {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  .old-price {
+    font-size: 22px;
+  }
+
+  .new-price {
+    font-size: 24px;
+  }
+  swiper-button-prev-discount,
+  .swiper-button-next-discount {
+    top: 55%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .promo-discount {
+    display: none;
+  }
+
+  .promo-discount-image2 {
+    display: none;
+  }
+
+  .discount-products {
+    height: auto;
+  }
+
+  .not-available {
+    top: 174px;
+    right: 11px;
+    font-size: 14px;
+    width: 260px;
+    height: 70px;
+  }
+  .cart-icon {
+    padding: 20px;
+  }
+  /* Flash icon */
+  .flash-icon {
+    padding: 15px;
+    border-radius: 5px; /* Fully rounded */
+    font-size: 20px;
+  }
+
+  .discount-badge {
+    left: 14px;
+    padding: 9px 14px;
+    font-size: 15px;
+  }
+
+  .time-box {
+    width: 55px;
+    height: 95px;
+  }
+  .number {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .label {
+    font-size: 20px;
+  }
+
+  .rating {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .shop-name {
+    font-size: 15px;
+  }
+
+  .product-name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .old-price {
+    font-size: 16px;
+  }
+
+  .new-price {
+    font-size: 18px;
+  }
+  .discount-right {
+    flex: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  #mySwiperDiscount {
+    height: 100%; /* Swiper should take full height */
+  }
+  .swiper-slide {
+    width: 0px;
+  }
+  swiper-button-prev-discount,
+  .swiper-button-next-discount {
+    top: 45%;
+    right: 21%;
+  }
+}
+
+@media (max-width: 1224px) {
+  .promo-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .promo-discount-image2 {
+    display: none;
+  }
+
+  .discount-products {
+    height: auto;
+  }
+
+  .not-available {
+    top: 150px;
+    right: 8px;
+    font-size: 14px;
+    width: 230px;
+    height: 70px;
+  }
+  .cart-icon {
+    padding: 20px;
+  }
+  /* Flash icon */
+  .flash-icon {
+    padding: 15px;
+    border-radius: 5px; /* Fully rounded */
+    font-size: 20px;
+  }
+
+  .discount-badge {
+    left: 14px;
+    padding: 9px 14px;
+    font-size: 15px;
+  }
+
+  .time-box {
+    width: 55px;
+    height: 95px;
+  }
+  .number {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .label {
+    font-size: 20px;
+  }
+  .product-image {
+    /* Adjust the size of the image inside the swiper-slide */
+    width: 100%; /* Make the image fill the width of the slide */
+    max-height: 300px; /* Set a max height to ensure it doesn't stretch */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+  }
+  .rating {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .shop-name {
+    font-size: 20px;
+  }
+
+  .product-name {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  .old-price {
+    font-size: 22px;
+  }
+
+  .new-price {
+    font-size: 24px;
+  }
+  .discount-right {
+    flex: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  #mySwiperDiscount {
+    height: 100%; /* Swiper should take full height */
+  }
+  .swiper-button-prev-discount,
+  .swiper-button-next-discount {
+    top: 35%;
+    right: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .promo-discount-image {
+    width: 50%;
+    height: 50%;
+  }
+  .promo-discount2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  .promo-discount-image2 {
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+  }
+
+  .discount-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .offer-image {
+    border-radius: 8px;
+    width: 50%;
+    height: 40%;
+  }
+  .discount-products {
+    border: 1px solid #f5f2f2;
+    box-shadow: 0px 4px 10px #f7fafd;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: auto;
+    padding: 0px;
+  }
+
+  .countdown {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .number {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .label {
+    font-size: 16px;
+  }
+  .discount-left {
+    flex: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .discount-right {
+    flex: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-card {
+    background: white;
+    padding-bottom: 80px;
+    overflow: hidden;
+    border-radius: 8px;
+    text-align: start;
+    flex: 1; /* Ensure each card takes equal space */
+    margin: 0 10px; /* Add some space between the cards */
+    transition: border 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .product-image {
+    /* Adjust the size of the image inside the swiper-slide */
+    width: 100%; /* Make the image fill the width of the slide */
+    max-height: 200px; /* Set a max height to ensure it doesn't stretch */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+  }
+  .cart-icon {
+    padding: 10px;
+  }
+  .not-available {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    background-color: white; /* Red background */
+    color: gray;
+    padding: 10px;
+    font-size: 12px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+  }
+  .not-available {
+    top: 120px;
+    right: 5px;
+    font-size: 14px;
+    width: 180px;
+    height: 40px;
+  }
+  /* Flash icon */
+  .flash-icon {
+    padding: 10px;
+    border-radius: 5px; /* Fully rounded */
+    font-size: 16px;
+  }
+  .discount-badge {
+    top: 5px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .rating {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+
+  .shop-name {
+    font-size: 14px;
+  }
+
+  .product-name {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .old-price {
+    font-size: 12px;
+  }
+
+  .new-price {
+    font-size: 14px;
+  }
+  .swiper-button-prev-discount,
+  .swiper-button-next-discount {
+    top: 35%;
+    right: 0%;
+  }
+}
